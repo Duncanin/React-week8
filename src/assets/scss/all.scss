@@ -1,0 +1,21 @@
+// 載入function
+@import "bootstrap/scss/functions";
+@import "./helpers/variables";
+@import "./helpers/variables-dark";
+
+
+//導入node_modules BS
+@import "bootstrap/scss/bootstrap";
+@import "./base/base";
+
+@import "./helpers/buttons";
+@import './components/components';
+
+@import "./util/utilities";
+@import "bootstrap/scss/utilities/api";
+
+
+@import './layout/header';
+@import './pages/index';
+@import './pages/register';
+@import './pages/login';

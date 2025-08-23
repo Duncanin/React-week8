@@ -1,0 +1,38 @@
+
+// 讓 font-size 工具類別有響應式斷點版本
+$utilities: map-merge(
+    $utilities,
+        ( "font-size": map-merge(
+            map-get( $utilities, "font-size"),
+                ( responsive:true,)
+            ),
+        )
+);
+
+$utilities: map-merge(
+    $utilities,
+        ( "position": map-merge(
+            map-get( $utilities, "position"),
+                ( responsive:true,)
+            ),
+        )
+);
+
+$utilities: map-merge(
+    $utilities,
+    (
+        "rounded": map-merge(
+        map-get($utilities, "rounded"),
+        (
+            values: map-merge(
+            map-get(map-get($utilities, "rounded"), "values"),
+                (
+                    6: 12px,
+                    7: 24px,
+                    8: 40px,
+                )
+            )
+        )
+        )
+    )
+);

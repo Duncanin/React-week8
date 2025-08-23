@@ -1,0 +1,53 @@
+
+.register {
+    padding-top: 60px;
+    padding-bottom: 90px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+@media (min-width:768px) {
+    .register {
+        gap: 40px;
+    }
+}
+
+
+.cover {
+    background-image: url(/src/assets/images/login/cover-1.png);
+    background-size: cover;
+    background-position: center;
+    max-height: 1000px;
+    height: 100%;
+    max-width: 600px;
+    animation: coverSwiper 8s infinite;
+
+    h2 {
+        font-size: 100px;
+        font-weight: 700;
+        color: #A37F71;
+        font-family: Poppins;
+    }
+    h3 {
+        font-size: 60px;
+        font-weight: 700;
+        color: #A37F71;
+        font-family: Poppins;
+    }
+    h4 {
+        font-size: 48px;
+        font-weight: bold;
+        color: #F3EEEC99;
+        text-shadow: 0 0 12px;
+
+    }
+}
+@keyframes coverSwiper {
+    0%   { background-image: url("/src/assets/images/login/cover-1.png"); }
+    33%  { background-image: url("/src/assets/images/login/cover-2.png"); }
+    66%  { background-image: url("/src/assets/images/login/cover-3.png"); }
+    100% { background-image: url("/src/assets/images/login/cover-1.png"); }
+}

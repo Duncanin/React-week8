@@ -1,0 +1,330 @@
+.banner {
+  background-image: url(../src/assets/images/index/bg-hero.png);
+  background-position: 65%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  padding-top: 48px;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    height: 25%;
+    width: 100%;
+    @media (min-width:992px) {
+      height: 33.333%;
+    }
+    background: linear-gradient(
+      to bottom,
+      rgba(34, 31, 30, 0) 0%,
+      rgba(34, 31, 30, 0.3) 14%,
+      rgba(34, 31, 30, 1) 54%,
+      rgba(34, 31, 30, 1) 100%
+    );
+  }
+}
+
+.recommend {
+  background-color: #221f1e;
+
+  .card {
+    width: 277px;
+  }
+}
+
+.navbar-search {
+  max-width: 720px;
+}
+
+.ctaBtn {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+}
+
+.trip {
+  background-image: url(../src/assets/images/index/deco-bg.svg);
+  background-size: cover;
+  background-position: center;
+  margin-top: 40px;
+  padding-bottom: 40px;
+}
+
+
+.spiriteMap {
+  // transform: rotate(-1.79deg);
+  clip-path: polygon(0 30px, 100% 0, 100% calc(100% - 30px), 0 100%);
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  .tag {
+    transform: rotate(8deg);
+    right: -52%;
+    top: -65%;
+  }
+  
+  .shining {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-right: 12px;
+    padding-left: 12px;
+    border-radius: 6px;
+    font-size: 8px;
+    font-weight: bold;
+    
+    img {
+      width: 12px;
+      height: 12px;
+    }
+  }
+  .quarter-circle {
+    width: 29px;
+    height: 29px;
+    border: 2px solid #4A3830;
+    border-radius: 0 0 100% 0;
+    border-left: 0;
+    border-top: 0;
+    margin-top: 8px;
+    margin-left: 20%;
+  }
+
+  .card {
+    min-width: 312px;
+    // max-height: 610px;
+    div:has(> img) {
+      height: 200px;
+      max-width: 280px;
+    }
+  }
+  .mapNum {
+    color: #DFD2CD;
+    font-weight: 400;
+    font-size: 100px;
+    font-style: italic;
+    left: 5%;
+    top: -8%;
+  }
+}
+
+
+.MelbournePlan .card {
+  min-width: 300px;
+  .price {
+    color: #808080;
+  }
+
+  .favorite-tag {
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    cursor: pointer;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    svg:hover,&.pressed {
+        transform: scale(1.2);
+    }
+    &:active svg {
+        fill: white;
+        stroke: white;
+    }
+  }
+}
+
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.marquee-content {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 7s linear infinite;
+  &>*{
+    backdrop-filter: blur(12px);
+    text-shadow: 0 0 1px 4px var(--bs-primary-40);
+  }
+}
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+.choose-cta .imagination {
+  background-image: url(/src/assets/images/index/bg-img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 40%;
+  height: 240px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  h2 {margin: 0;}
+  &>:nth-child(1){
+    color: white;
+    opacity: 32%;
+  }
+  &>:nth-child(2){
+    color: white;
+    opacity: 66%;
+  }
+}
+
+.choose-cta .choose-content {
+  display: grid;
+  gap: 16px;
+}
+
+
+// RWD
+@media (min-width:992px) {
+  .banner {
+    padding-top: 212px;
+  }
+  .recommend .card {
+    width: 25%;
+    max-width: 416px;
+    height: 600px;
+    transition: width 0.5s;
+    
+    &:hover {
+      width: 100%;
+      .btn {
+      display: flex !important;
+      }
+    }
+
+  }
+}
+
+@media (min-width:992px) {
+  .trip {
+    margin-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  .offset-row {
+    transform: translateX(5rem);
+  }
+  
+  .tripCard {
+    width: 100%;
+    img {
+      height: 240px;
+    }
+    .card-body {
+      height: 104px;
+    }
+  }
+
+  .spiriteMap {
+    clip-path: polygon(0 60px, 100% 0, 100% calc(100% - 60px), 0 100%);
+
+    padding-top: 200px;
+    padding-bottom: 200px;
+    border-radius: 8px;
+
+    .tag {
+      right: -35%;
+      top: -45%;
+    }
+
+    .shining {
+      font-size: 14px;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      padding-right: 16px;
+      padding-left: 16px;
+      border-radius: 8px;
+
+      img {
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    .quarter-circle {
+      width: 38px;
+      height: 38px;
+    }
+
+
+    .card {
+      min-width: 746px;
+      max-height: 444px;
+
+      div:has(> img) {
+        width: 300px;
+        height: 100%;
+      }
+    }
+
+    .mapNum {
+      font-size: 200px;
+      top: -25%;
+      left: 4%;
+    }
+  }
+}
+
+@media (min-width:768px) {
+  .choose-cta .title {
+    font-size: 90px;
+  }
+  .choose-cta .subtitle {
+    font-size: 40px;
+  }
+  .choose-cta .choose-content {
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto auto;
+    &>:nth-child(1) {
+      grid-column: span 6;
+      grid-row: 1;
+    }
+    &>:nth-child(2) {
+      grid-column: span 6;
+      grid-row: 1 / span 2;
+    }
+    &>:nth-child(3) {
+      grid-column: span 6;
+    }
+  }
+  
+}
+
+@media (min-width:992px) {
+    .choose-cta {
+    background-image: url(/src/assets/images/index/bg-line.svg),url(/src/assets/images/index/bg-circle.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: center, 98% 300%;
+    background-size: fit, 720px 720px;
+    .bg-circle {
+      width: 800px;
+      height: 800px;
+      top: -90%;
+      left: -60%;
+    }
+  }
+  .choose-cta .title {
+    font-size: 130px;
+  }
+  .choose-cta .subtitle {
+    font-size: 72px;
+  }
+  .choose-cta .imagination {
+    height: 600px;
+  }
+
+  .choose-cta .choose-content {
+    &>:nth-child(3) {
+      grid-column: span 4;
+      white-space: nowrap;
+    }
+  }
+}
+
+@media (min-width:1200px) {
+  .choose-cta .title {
+    font-size: 150px;
+  }
+}

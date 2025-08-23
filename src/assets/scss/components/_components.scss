@@ -1,0 +1,20 @@
+
+.footer-logo {
+    width: 192px;
+    height: 32px;
+    @media (min-width:992px) {
+        width: 280px;
+        height: 45px;
+    }
+}
+.footer {
+    padding: 40px 0;
+    @media (min-width:992px) {
+        padding: 100px 0;
+    }
+    .social-link {
+        width: 40px;
+        height: 40px;
+    }
+}
+
