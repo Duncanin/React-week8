@@ -4,22 +4,22 @@ import { useMemo, useState } from "react";
 
 export default function Home() {
     const plans = useMemo(() => ([
-        { img: "../src/assets/images/index/recommend.png",   title: "峇里島渡假漫遊", desc: "精選五星級海灘度假村，專屬私人管家服務，讓您徹底放鬆身心。" },
-        { img: "../src/assets/images/index/recommend-1.png", title: "日本深度賞櫻計畫", desc: "春季限定，東京、京都、大阪賞櫻之旅，體驗日本文化的精髓。" },
-        { img: "../src/assets/images/index/recommend-2.png", title: "紐西蘭雪山探險", desc: "探索南島壯麗的自然風光，體驗各種極限運動和戶外活動。" },
-        { img: "../src/assets/images/index/recommend-3.png", title: "摩洛哥迷幻之旅", desc: "漫步沙漠與古城之間，探索千年文化與色彩繽紛的市集風情。" },
+        { img: new URL("../assets/images/index/recommend.png", import.meta.url).href, title: "峇里島渡假漫遊", desc: "精選五星級海灘度假村，專屬私人管家服務，讓您徹底放鬆身心。" },
+        { img: new URL("../assets/images/index/recommend-1.png", import.meta.url).href, title: "日本深度賞櫻計畫", desc: "春季限定，東京、京都、大阪賞櫻之旅，體驗日本文化的精髓。" },
+        { img: new URL("../assets/images/index/recommend-2.png", import.meta.url).href, title: "紐西蘭雪山探險", desc: "探索南島壯麗的自然風光，體驗各種極限運動和戶外活動。" },
+        { img: new URL("../assets/images/index/recommend-3.png", import.meta.url).href, title: "摩洛哥迷幻之旅", desc: "漫步沙漠與古城之間，探索千年文化與色彩繽紛的市集風情。" },
     ]), []);
 
     const hotTrip = useMemo(() => ([
-        { img: "../src/assets/images/index/hotTrip/intro-1.png", title: "ZOBAA 專屬推薦行程", desc: "嚴選深度行程，豐富旅行靈感" },
-        { img: "../src/assets/images/index/hotTrip/intro-2.png", title: "旅人攻略集合",       desc: "景點、交通、私房景點一次掌握" },
-        { img: "../src/assets/images/index/hotTrip/intro-3.png", title: "優惠機票、酒店",     desc: "即時比價，聰明出發不踩雷" },
-        { img: "../src/assets/images/index/hotTrip/intro-4.png", title: "銀行專屬優惠",       desc: "使用指定卡別享受獨家旅遊好康" },
+        { img: new URL("../assets/images/index/hotTrip/intro-1.png", import.meta.url).href, title: "ZOBAA 專屬推薦行程", desc: "嚴選深度行程，豐富旅行靈感" },
+        { img: new URL("../assets/images/index/hotTrip/intro-2.png", import.meta.url).href, title: "旅人攻略集合",       desc: "景點、交通、私房景點一次掌握" },
+        { img: new URL("../assets/images/index/hotTrip/intro-3.png", import.meta.url).href, title: "優惠機票、酒店",     desc: "即時比價，聰明出發不踩雷" },
+        { img: new URL("../assets/images/index/hotTrip/intro-4.png", import.meta.url).href, title: "銀行專屬優惠",       desc: "使用指定卡別享受獨家旅遊好康" },
     ]), []);
 
     const spiriteMaps = useMemo(() => ([
         {
-            img: "../src/assets/images/index/maps/map-1.png",
+            img: new URL("../assets/images/index/maps/map-1.png", import.meta.url).href,
             tags: ["亞洲","日本京都"],
             title: "走進四季交織的文化時光",
             desc: "穿過紅葉與古寺的交錯，感受從櫻花盛開到秋楓染紅的日式浪漫。",
@@ -27,7 +27,7 @@ export default function Home() {
             link:"立即探索魅力古都",
         },
         {
-            img: "../src/assets/images/index/maps/map-2.png",
+            img: new URL("../assets/images/index/maps/map-2.png", import.meta.url).href,
             tags: ["亞洲","南韓首爾"],
             title: "從街邊美食到韓劇場景",
             desc: "白天在弘大小巷探店，夜晚登上南山塔俯瞰整座城市的閃爍。",
@@ -35,7 +35,7 @@ export default function Home() {
             link:"感受韓系風格日常",
         },
         {
-            img: "../src/assets/images/index/maps/map-3.png",
+            img: new URL("../assets/images/index/maps/map-3.png", import.meta.url).href,
             tags: ["歐洲","法國巴黎"],
             title: "在藝術與咖啡香中迷路",
             desc: "穿梭左岸書店與畫廊，任由麵包香與建築細節擁抱你的步伐。",
@@ -43,7 +43,7 @@ export default function Home() {
             link:"開啟我的巴黎報險",
         },
         {
-            img: "../src/assets/images/index/maps/map-4.png",
+            img: new URL("../assets/images/index/maps/map-4.png", import.meta.url).href,
             tags: ["大洋洲","澳洲雪梨"],
             title: "城市與大自然的交會",
             desc: "清晨在海灘做瑜珈，午後漫步歌劇院，享受城市的節奏與野性的呼喚。",
@@ -51,7 +51,7 @@ export default function Home() {
             link:"現在就飛向南半球",
         },
         {
-            img: "../src/assets/images/index/maps/map-4.png",
+            img: new URL("../assets/images/index/maps/map-4.png", import.meta.url).href,
             tags: ["非洲","埃及開羅"],
             title: "穿越千年時光的沙漠冒險",
             desc: "乘著駱駝走過古老遺跡，抬頭仰望太陽神的光芒，在歷史與傳說之間迷失。",
@@ -61,7 +61,7 @@ export default function Home() {
     ]), []);
     const MelbournePlan = useMemo(() => ([
         {
-            img: "../src/assets/images/index/Melbourne/journey-1.png",
+            img: new URL("../assets/images/index/Melbourne/journey-1.png", import.meta.url).href,
             title: "【獨家優惠】布萊頓彩色小屋＋森林蒸汽火車一日遊",
             tags: ["即買即用","5 天前可免費取消"],
             stars:4.2,
@@ -71,7 +71,7 @@ export default function Home() {
             specialPrice:4220,
         },
         {
-            img: "../src/assets/images/index/Melbourne/journey-2.png",
+            img: new URL("../assets/images/index/Melbourne/journey-2.png", import.meta.url).href,
             title: "無尾熊動物園＋企鵝歸巢雙享之旅",
             tags: ["即買即用","7 天前可免費取消"],
             stars:4.2,
@@ -81,7 +81,7 @@ export default function Home() {
             specialPrice:3890,
         },
         {
-            img: "../src/assets/images/index/Melbourne/journey-3.png",
+            img: new URL("../assets/images/index/Melbourne/journey-3.png", import.meta.url).href,
             title: "大洋路經典一日遊｜中文導覽！體驗澳洲最夢幻的海岸線",
             tags: ["中文導覽","5 天前可免費取消"],
             stars:4.2,
@@ -91,7 +91,7 @@ export default function Home() {
             specialPrice:3960,
         },
         {
-            img: "../src/assets/images/index/Melbourne/journey-4.png",
+            img: new URL("../assets/images/index/Melbourne/journey-4.png", import.meta.url).href,
             title: "墨爾本市區導覽｜壁畫巷＋隱藏咖啡廳之旅，體驗本地咖啡文化、隱藏小巷拍照",
             tags: ["專業導覽","3 天前可免費取消"],
             stars:4.2,
@@ -237,7 +237,7 @@ export default function Home() {
                                     <div className="d-inline-block tag position-absolute">
                                         <div className="bg-neutral-white shining d-inline-flex gap-1">
                                         <span>ZOBAA 年度榜</span>
-                                        <img src="../src/assets/images/index/shining.svg" alt="icon" className="align-baseline" />
+                                        <img src="/src/assets/images/index/shining.svg" alt="icon" className="align-baseline" />
                                         </div>
                                         <div className="quarter-circle" />
                                     </div>
@@ -336,7 +336,7 @@ export default function Home() {
                             <div className="d-flex gap-6 overflow-x-scroll my-10 MelbournePlan">
                                 {MelbournePlan.map((p,i) => (
                                     <div key={i} className="card gap-7 border-0 row g-0">
-                                        {/* photo */}
+                                        
                                         <div className="position-relative">
                                             <img src={p.img} className="object-fit-cover w-100 h-100 rounded-4" alt={p.title} />
                                             <button className="position-absolute end-0 top-0 p-5 favorite-tag border-0" aria-pressed={Boolean(favorites[i])} onClick={()=> setFavorites(p=>({ ...p, [i]: !p[i] }))} >
@@ -424,7 +424,7 @@ export default function Home() {
                             <section className="rounded-7 imagination fs-3 position-relative">
                                 <h2 className="title"># ZOBAAAAA !</h2>
                                 <h2 className="subtitle">把旅行變成生活的養分。</h2>
-                                <img src="../src/assets/images/index/bg-circle.svg" alt="bg" className="position-absolute bg-circle d-none d-lg-block"/>
+                                <img src="/src/assets/images/index/bg-circle.svg" alt="bg" className="position-absolute bg-circle d-none d-lg-block"/>
                             </section>
 
                             <section className="bg-primary-10 bg-opacity-50 rounded-7 p-7 choose-content">
@@ -434,7 +434,7 @@ export default function Home() {
                                 </div>
 
                                 <div className="d-flex flex-column flex-md-row gap-5 gap-lg-7">
-                                    <div className="bg-white p-7 rounded-4 gap-2 w-50 d-flex flex-column justify-content-center text-nowrap">
+                                    <div className="bg-white p-7 rounded-4 gap-2 w-100 d-flex flex-column justify-content-center text-nowrap">
                                         <h3 className="d-flex">
                                             8 年
                                             <span className="fs-body1 ms-2 mb-auto">+</span>
@@ -442,7 +442,7 @@ export default function Home() {
                                         <p className="text-primary-80 m-0 fw-bold">旅遊企劃經驗</p>
                                     </div>
 
-                                    <div className="bg-white p-7 rounded-4 gap-2 w-50 d-flex flex-column justify-content-center text-nowrap">
+                                    <div className="bg-white p-7 rounded-4 gap-2 w-100 d-flex flex-column justify-content-center text-nowrap">
                                         <h3 className="d-flex">
                                             30,000
                                             <span className="fs-body1 ms-2 mb-auto">+</span>
@@ -451,7 +451,7 @@ export default function Home() {
                                     </div>
                                 </div>
 
-                                <button type="button" className="btn btn-dark rounded-pill d-flex justify-content-between align-items-center fs-subtitle fs-md-body1 fs-md-6 py-md-7 px-md-9">
+                                <button type="button" className="btn btn-dark rounded-pill d-flex justify-content-between align-items-center fs-subtitle fs-md-body1 fs-md-6 py-5 px-7 py-md-7 px-md-9">
                                     立即探索我們的精心旅程
                                     <span className="material-symbols-outlined align-bottom ms-2 bg-white text-black fs-body1 p-1 rounded-pill">arrow_forward</span>
                                 </button>
